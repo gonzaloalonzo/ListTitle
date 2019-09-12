@@ -17,9 +17,15 @@ class MyApp extends StatelessWidget {
      routes: <String, WidgetBuilder>{
        '/'   : (BuildContext context) => HomePage(),
        'alert'  : (BuildContext context) => AlertPage(),
-       'avatar' : (BuildContext context) => AvatarPage(),
-       //'/' : (BuildContext context) => HomePage(),
-     },
+       'avatar' : (BuildContext context) => AvatarPage()
+      },
+      onGenerateRoute: (RouteSettings settings){
+
+return MaterialPageRoute(
+  builder: (BuildContext context) => AlertPage(),
+);
+
+      },
     );
   }
 }
